@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class BeatBoxController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Vector3 startPos;
+    private float camerax;
+    [SerializeField] private float xoffset = 0f;
+
     void Start()
     {
-        
+        startPos = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        camerax = GameObject.FindGameObjectWithTag("MainCamera").transform.position.x;
+        transform.position = startPos + new Vector3(camerax+xoffset, Mathf.Sin(Time.time), 0.0f);
     }
 }
