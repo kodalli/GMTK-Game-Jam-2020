@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class backgroundLoop : MonoBehaviour
+public class BackgroundLoop : MonoBehaviour
 {
     public GameObject[] levels;
     private Camera mainCamera;
@@ -25,7 +25,7 @@ public class backgroundLoop : MonoBehaviour
     void loadChildObjects(GameObject obj)
     {
         float objectWidth = obj.GetComponent<SpriteRenderer>().bounds.size.x - choke;
-        int childsNeeded = (int)Mathf.Ceil(screenBounds.x * 2 / objectWidth);
+        int childsNeeded = (int)Mathf.Ceil(screenBounds.x * 2 / objectWidth) + 1;
         GameObject clone = Instantiate(obj) as GameObject;
         for (int i = 0; i <= childsNeeded; i++)
         {
@@ -45,7 +45,7 @@ public class backgroundLoop : MonoBehaviour
             GameObject firstChild = children[1].gameObject;
             GameObject lastChild = children[children.Length - 1].gameObject;
             float halfObjectWidth = lastChild.GetComponent<SpriteRenderer>().bounds.extents.x - choke;
-            if (transform.position.x + screenBounds.x > lastChild.transform.position.x + halfObjectWidth)
+            if (transform.position.x + screenBounds.x > lastChild.transform.position.x - halfObjectWidth) 
             {
                 firstChild.transform.SetAsLastSibling();
                 firstChild.transform.position = new Vector3(lastChild.transform.position.x + halfObjectWidth * 2, lastChild.transform.position.y, lastChild.transform.position.z);
