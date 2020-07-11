@@ -10,12 +10,12 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isJumping = false;
 
-    [SerializeField] private float jumpForce = 2f;
-    [SerializeField] private float speed = 2.0f;
-    [SerializeField] private float fallMultiplier = 2.5f;
-    [SerializeField] private float lowJump = 150f;
+    private float jumpForce = 5f;
+    private float speed = 5f;
+    private float fallMultiplier = 2.5f;
+    private float lowJump = 250f;
     // [SerializeField] private float decayRate = 0.1f;
-    float maxJumpTime = 0.4f;
+    float maxJumpTime = 0.3f;
     float jumpTimeCounter;
     float jumpCooldown;
 
@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         if(!isJumping && jumpValue > 0.5f && jumpCooldown < 0f)
         {
             animator.SetBool("Jumping", true);
-            jumpCooldown = 0.5f;
+            jumpCooldown = 0.7f;
             rb.AddForce(transform.up * lowJump);
             isJumping = true;
             jumpTimeCounter = maxJumpTime;
