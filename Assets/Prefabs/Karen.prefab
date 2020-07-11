@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 5671246005926175942}
   - component: {fileID: 1031446868559046701}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: jump detection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -393,7 +393,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseOffsetSpeed: 0.1
-  jumpForce: 20
 --- !u!58 &2393241272676611122
 CircleCollider2D:
   m_ObjectHideFlags: 0

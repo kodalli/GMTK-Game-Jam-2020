@@ -27,7 +27,7 @@ public class tilemapLoop : MonoBehaviour
     void loadChildObjects(GameObject obj)
     {
         float objectWidth = obj.GetComponent<TilemapRenderer>().bounds.size.x - choke1;
-        int childsNeeded = (int)Mathf.Ceil(screenBounds.x * 2 / objectWidth) + 1;
+        int childsNeeded = (int)Mathf.Ceil(screenBounds.x * 2 / objectWidth)+1;
         GameObject clone = Instantiate(obj) as GameObject;
         for (int i = 0; i <= childsNeeded; i++)
         {
@@ -47,10 +47,10 @@ public class tilemapLoop : MonoBehaviour
             GameObject firstChild = children[1].gameObject;
             GameObject lastChild = children[children.Length - 1].gameObject;
             float halfObjectWidth = lastChild.GetComponent<TilemapRenderer>().bounds.extents.x - choke1;
-            if (transform.position.x + screenBounds.x > lastChild.transform.position.x - halfObjectWidth)
+            if (transform.position.x + screenBounds.x > lastChild.transform.position.x)
             {
                 firstChild.transform.SetAsLastSibling();
-                firstChild.transform.position = new Vector3(lastChild.transform.position.x + halfObjectWidth * 2, lastChild.transform.position.y, lastChild.transform.position.z);
+                firstChild.transform.position = new Vector3((lastChild.transform.position.x + halfObjectWidth * 2)-3, lastChild.transform.position.y, lastChild.transform.position.z);
             }
             else if (transform.position.x - screenBounds.x < firstChild.transform.position.x - halfObjectWidth)
             {
