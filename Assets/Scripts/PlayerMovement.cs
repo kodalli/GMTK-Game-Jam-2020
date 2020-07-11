@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isJumping = false;
 
+    [SerializeField] private float jumpForce = 150.0f;
+    [SerializeField] private float speed = 2.0f;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -20,14 +23,14 @@ public class PlayerMovement : MonoBehaviour
         float jumpValue = Input.GetAxis("Jump");
         if(!isJumping && jumpValue > 0.5f)
         {
-            rb.AddForce(transform.up * 150.0f);
+            rb.AddForce(transform.up * jumpForce);
             isJumping = true;
         }
     }
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(2.0f, rb.velocity.y);
+        rb.velocity = new Vector2(speed, rb.velocity.y);
     }
 
     void OnCollisionEnter2D(Collision2D other)

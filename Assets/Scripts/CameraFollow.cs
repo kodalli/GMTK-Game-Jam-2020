@@ -2,17 +2,18 @@
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform objectTransform;
+    private Transform objectTransform;
 
-    private float deltaX = 0.0f;
+    private float deltaX;
 
     void Start()
     {
-        deltaX = transform.position.x - objectTransform.position.x;
+        objectTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
     {
+        deltaX = transform.position.x - objectTransform.position.x;
         transform.position = new Vector3(objectTransform.position.x + deltaX, transform.position.y, transform.position.z);
     }
 }

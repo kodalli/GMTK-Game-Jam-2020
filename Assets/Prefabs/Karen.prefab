@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7917869039435919649}
   - component: {fileID: 5099314715885240366}
   - component: {fileID: 8824540560228778900}
+  - component: {fileID: -4884189701070498917}
   m_Layer: 0
   m_Name: Karen
   m_TagString: Untagged
@@ -150,4 +151,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &-4884189701070498917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5902693078914500005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984f0060c80d83a439899baaefc2b521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2.1
