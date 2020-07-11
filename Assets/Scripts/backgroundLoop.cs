@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class BackgroundLoop : MonoBehaviour
+public class backgroundLoop : MonoBehaviour
 {
     public GameObject[] levels;
     private Camera mainCamera;
