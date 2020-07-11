@@ -5,7 +5,7 @@ public class CameraFollow : MonoBehaviour
     private Transform player;
     [SerializeField] private float smoothTime = 0f;
     private Vector3 velocity = Vector3.zero;
-    [SerializeField] private Vector3 cameraLocation = new Vector3(0, 1, -10);
+    private Vector3 cameraLocation = new Vector3(0, 15, -10);
     // private float deltaX;
 
     void Start()
