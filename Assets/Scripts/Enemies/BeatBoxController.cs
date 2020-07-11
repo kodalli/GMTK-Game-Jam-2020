@@ -15,7 +15,7 @@ public class BeatBoxController : MonoBehaviour
 
     void FixedUpdate()
     {
-        camerax = GameObject.FindGameObjectWithTag("MainCamera").transform.position.x;
+        camerax = GameObject.FindGameObjectWithTag("Player").transform.position.x;
         transform.position = startPos + new Vector3(camerax+xoffset, Mathf.Sin(Time.time), 0.0f);
     }
 }

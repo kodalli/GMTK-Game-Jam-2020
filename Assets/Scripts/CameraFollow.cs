@@ -18,7 +18,7 @@ public class CameraFollow : MonoBehaviour
         // deltaX = transform.position.x - objectTransform.position.x;
         //transform.position = Vector3.SmoothDamp(objectTransform.position.x + deltaX, transform.position.y, transform.position.z);
         Vector3 targetPosition = objectTransform.TransformPoint(cameraLocation);
-
+        // targetPosition.y = transform.position.y;
         // Smoothly move the camera towards that target position
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
 
