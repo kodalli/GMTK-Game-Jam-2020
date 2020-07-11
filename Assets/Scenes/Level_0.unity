@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 559205914}
   - component: {fileID: 559205913}
   - component: {fileID: 559205912}
+  - component: {fileID: 559205915}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -204,6 +205,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &559205915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559205911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd369fefec799f94386c87aefae2a8dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraLocation: {x: 0, y: 2, z: -10}
 --- !u!1 &1035288733
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +863,28 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1612959309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5902693078914500005, guid: a3b77cb05703521448f7e871d127bc88,
+    type: 3}
+  m_PrefabInstance: {fileID: 1477862054401503479}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &1612959312
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612959309}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1 &2114593381
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,7 +939,7 @@ PrefabInstance:
     - target: {fileID: 5832138042316367571, guid: a3b77cb05703521448f7e871d127bc88,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.966252
+      value: -8.33
       objectReference: {fileID: 0}
     - target: {fileID: 5832138042316367571, guid: a3b77cb05703521448f7e871d127bc88,
         type: 3}
@@ -960,7 +996,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karen
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5099314715885240366, guid: a3b77cb05703521448f7e871d127bc88, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a3b77cb05703521448f7e871d127bc88, type: 3}
 --- !u!1001 &1665626546949223920
 PrefabInstance:
@@ -972,7 +1009,7 @@ PrefabInstance:
     - target: {fileID: 1665626547054172256, guid: 2f99e719aa60e794aa457488b47a7d5c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8
+      value: -4.94
       objectReference: {fileID: 0}
     - target: {fileID: 1665626547054172256, guid: 2f99e719aa60e794aa457488b47a7d5c,
         type: 3}
