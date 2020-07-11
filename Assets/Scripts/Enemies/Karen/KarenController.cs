@@ -35,8 +35,8 @@ public class KarenController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("hit");
-        if(collision.gameObject.tag == "Obstacle")
+        Debug.Log("hit");
+        if(collision.gameObject.tag == "obstacle")
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
     }
 }
