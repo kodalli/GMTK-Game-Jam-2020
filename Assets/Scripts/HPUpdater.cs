@@ -5,8 +5,17 @@ using TMPro;
 
 public class HPUpdater : MonoBehaviour
 {
-    TextMesh hp;
+    TextMeshPro healthPoints;
     void Start()
     {
+        healthPoints = GetComponent<TextMeshPro>();
+    }
+    void Update()
+    {
+        UpdateHealth();
+    }
+    private void UpdateHealth()
+    {
+        healthPoints.text = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().health.ToString();
     }
 }
