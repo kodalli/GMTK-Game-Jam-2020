@@ -557,8 +557,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab:
-  - {fileID: 832372804196895405, guid: 545c4fd1f76776d4b90c5adaeda5009e, type: 3}
   - {fileID: 2130880332088838115, guid: c714ddf0563ceae4ea0639824b0b86c4, type: 3}
+  - {fileID: 832372804196895405, guid: 545c4fd1f76776d4b90c5adaeda5009e, type: 3}
 --- !u!114 &920982677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6554c3180ef90ce4b8543cac4aa48aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 30
+  explosion: {fileID: 0}
 --- !u!4 &923308028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7079617689603822244, guid: 843ad0bfb07474942945478bfd472aa4,
