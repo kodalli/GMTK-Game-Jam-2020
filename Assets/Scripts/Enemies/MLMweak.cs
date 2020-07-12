@@ -6,6 +6,7 @@ public class MLMweak : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private GameObject explosion;
+    private int damage = 25;
     void Start()
     {
         StartCoroutine(Kill());
@@ -16,6 +17,12 @@ public class MLMweak : MonoBehaviour
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Karen" || collision.gameObject.tag == "Enemy")
         {
             Die();
+        }
+
+        Health health = collision.gameObject.GetComponent<Health>();
+        if (health != null)
+        {
+            health.TakeDamage(damage);
         }
     }
     public void Die()

@@ -32,6 +32,10 @@ public class KanyeController : MonoBehaviour
         }
         else if (hitInfo.gameObject.tag == "Player")
         {
+            if (hitInfo.gameObject.GetComponent<Rigidbody2D>().velocity.y < 0)
+            {
+                Die();
+            }
             Health health = hitInfo.GetComponent<Health>();
             if (health != null)
             {

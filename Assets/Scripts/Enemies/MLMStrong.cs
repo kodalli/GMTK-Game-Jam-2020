@@ -5,6 +5,7 @@ using UnityEngine;
 public class MLMStrong : MonoBehaviour
 {
     [SerializeField] private GameObject explosion;
+    private int damage = 25;
     void Start()
     {
         StartCoroutine(Kill());
@@ -15,6 +16,16 @@ public class MLMStrong : MonoBehaviour
         if (collision.gameObject.tag == "Karen")
         {
             Die();
+        }
+        if (collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<Rigidbody2D>().velocity.y < 0.1)
+        {
+            Die();
+            return;
+        }
+        Health health = collision.gameObject.GetComponent<Health>();
+        if (health != null)
+        {
+            health.TakeDamage(damage);
         }
     }
     public void Die()

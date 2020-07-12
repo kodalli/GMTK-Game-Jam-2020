@@ -7,7 +7,7 @@ public class AlexController : MonoBehaviour
     [SerializeField] private int damage = 25;
     [SerializeField] private GameObject explosion;
     [SerializeField] private GameObject frog;
-    private float force = 5f;
+    private float force = 15f;
     private float dist;
     private float fireRate = 2f;
     private float timer = -1;
@@ -36,6 +36,11 @@ public class AlexController : MonoBehaviour
         }
         else if (hitInfo.gameObject.tag == "Player")
         {
+            if (hitInfo.gameObject.GetComponent<Rigidbody2D>().velocity.y < 0.1)
+            {
+                Die();
+                return;
+            }
             Health health = hitInfo.GetComponent<Health>();
             if (health != null)
             {
