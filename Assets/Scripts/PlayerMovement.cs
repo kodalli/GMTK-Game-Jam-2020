@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,12 +9,12 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isJumping = false;
 
-    private float jumpForce = 5f;
+    private float jumpForce = 13f;
     private float speed = 5f;
-    private float fallMultiplier = 2.5f;
-    private float lowJump = 250f;
+    private float fallMultiplier = 3f;
+    private float lowJump = 550f;
     // [SerializeField] private float decayRate = 0.1f;
-    float maxJumpTime = 0.3f;
+    float maxJumpTime = 0.15f;
     float jumpTimeCounter;
     float jumpCooldown;
 
@@ -60,8 +59,8 @@ public class PlayerMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         isJumping = false;
-        if (other.gameObject.tag == "Obstacle") {
-            SceneManager.LoadScene(0);
+        if (other.gameObject.tag == "obstacle") {
+             this.GetComponent<Health>().TakeDamage(25);
         }
     }
     //private void OnTriggerEnter2D(Collider2D collision)

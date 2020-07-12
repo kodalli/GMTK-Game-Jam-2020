@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Obstacle
+  - Enemy
+  - obstacle
+  - ground
+  - heal
+  - Karen
   layers:
   - Default
   - TransparentFX
@@ -14,8 +18,8 @@ TagManager:
   - UI
   - 
   - 
-  - ground
-  - obstacle
+  - 
+  - 
   - 
   - 
   - 
