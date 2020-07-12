@@ -2893,6 +2893,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Karen
       objectReference: {fileID: 0}
+    - target: {fileID: 8824540560228778900, guid: a3b77cb05703521448f7e871d127bc88,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3b77cb05703521448f7e871d127bc88, type: 3}
 --- !u!1 &1214393323
@@ -4446,25 +4451,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1295547855 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1665626547054172281, guid: 2f99e719aa60e794aa457488b47a7d5c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1665626546949223920}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1295547862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1295547855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc5e995bee24bd74097f8a0cebd4d857, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
 --- !u!1 &1925373687
 GameObject:
   m_ObjectHideFlags: 0
@@ -4718,21 +4704,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
-    - target: {fileID: 1665626547054172282, guid: 2f99e719aa60e794aa457488b47a7d5c,
-        type: 3}
-      propertyPath: jumpForce
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1665626547054172282, guid: 2f99e719aa60e794aa457488b47a7d5c,
-        type: 3}
-      propertyPath: decayRate
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1665626547054172282, guid: 2f99e719aa60e794aa457488b47a7d5c,
-        type: 3}
-      propertyPath: lowJump
-      value: 150
-      objectReference: {fileID: 0}
     - target: {fileID: 1665626547054172285, guid: 2f99e719aa60e794aa457488b47a7d5c,
         type: 3}
       propertyPath: lowJump
@@ -4749,7 +4720,7 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 1665626547054172282, guid: 2f99e719aa60e794aa457488b47a7d5c, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 2f99e719aa60e794aa457488b47a7d5c, type: 3}
 --- !u!1001 &3041356191021553119
 PrefabInstance:

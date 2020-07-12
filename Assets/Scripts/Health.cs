@@ -10,6 +10,9 @@ public class Health : MonoBehaviour
     private int maxHealth = 100;
     public int health = 100;
     [SerializeField] private GameObject explosion;
+
+    private TextMeshProUGUI textMesh;
+
     public void TakeDamage(int damage)
     {
 
