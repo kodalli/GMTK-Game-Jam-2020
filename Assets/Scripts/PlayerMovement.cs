@@ -29,30 +29,33 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         jumpValue = Input.GetAxis("Jump");
+        
     }
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(speed, rb.velocity.y);
-        if (!isJumping && jumpValue > 0.5f && jumpCooldown < 0f) {
+        if(!isJumping && jumpValue > 0.5f && jumpCooldown < 0f)
+        {
             animator.SetBool("Jumping", true);
             jumpCooldown = 0.7f;
             rb.AddForce(transform.up * lowJump);
             isJumping = true;
             jumpTimeCounter = maxJumpTime;
 
-        } else if (isJumping && jumpValue > 0.5f) {
+        }
+        else if (isJumping && jumpValue > 0.5f) {
             if (jumpTimeCounter > 0) {
                 rb.AddForce(transform.up * jumpForce);
                 jumpTimeCounter -= Time.deltaTime;
                 // Debug.Log(jumpTimeCounter);
-            }
+            } 
         }
         if (rb.velocity.y < 0) {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
             animator.SetBool("Jumping", false);
         }
         jumpCooldown -= Time.deltaTime;
+        rb.velocity = new Vector2(speed, rb.velocity.y);
     }
 
     void OnCollisionEnter2D(Collision2D other)

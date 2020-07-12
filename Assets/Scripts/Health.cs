@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Health : MonoBehaviour
 {
@@ -10,25 +11,27 @@ public class Health : MonoBehaviour
     public int health = 100;
     [SerializeField] private GameObject explosion;
 
+    private TextMeshProUGUI textMesh;
+
     public void TakeDamage(int damage)
     {
 
-        health -= damage;
+            health -= damage;
 
-        if (health <= 0)
-        {
-            Die();
-        }
-
+            if (health <= 0)
+            {
+                Die();
+            }
+  
     }
     public void Heal(int heart)
     {
-        if (health < maxHealth)
+        if(health < maxHealth)
             health += heart;
     }
     public void Die()
     {
-        if (!dead)
+        if(!dead)
             StartCoroutine(Death());
     }
     private IEnumerator Death()
@@ -39,5 +42,9 @@ public class Health : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(0);
     }
-
+    public int getHealth()
+    {
+        return health;
+    }
+        
 }
