@@ -6,6 +6,11 @@ public class SpaceForce : MonoBehaviour
 {
     private int damage = 25;
     [SerializeField] private GameObject explosion;
+
+    void Start()
+    {
+        StartCoroutine(Kill());
+    }
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         // Debug.Log(hitInfo.name);
@@ -22,10 +27,13 @@ public class SpaceForce : MonoBehaviour
     }
     public void Die()
     {
-        //Debug.Log("Emit");
         Instantiate(explosion, transform.position, transform.rotation);
-        //ps.enableEmission = true;
         Destroy(gameObject);
 
+    }
+    private IEnumerator Kill()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
     }
 }

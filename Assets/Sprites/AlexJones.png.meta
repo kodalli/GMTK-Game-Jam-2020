@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 9ff4f8245d29dac44a86bbd4c1d27208
+guid: 49ebdee07ce9d5a4a98ea2ebd7146d59
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8314308955538630803
-    second: fire_animation_0
+      213: 3924286036836118420
+    second: AlexJones_0
   - first:
-      213: 996638998543384504
-    second: fire_animation_1
+      213: 4647113681792428460
+    second: AlexJones_1
   - first:
-      213: 2056924120469444468
-    second: fire_animation_2
+      213: 5233288046010446549
+    second: AlexJones_2
+  - first:
+      213: 252157223354715456
+    second: AlexJones_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,13 +111,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fire_animation_0
+      name: AlexJones_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,41 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 398aab7a1fb526370800000000000000
-      internalID: 8314308955538630803
+      spriteID: 49f64a6db5dd57630800000000000000
+      internalID: 3924286036836118420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fire_animation_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bfba7583e5c4dd00800000000000000
-      internalID: 996638998543384504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fire_animation_2
+      name: AlexJones_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +146,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 477938ae699ab8c10800000000000000
-      internalID: 2056924120469444468
+      spriteID: ca9681aa54ddd7040800000000000000
+      internalID: 4647113681792428460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlexJones_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d230cd20cf50a840800000000000000
+      internalID: 5233288046010446549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AlexJones_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d4b9d98a7df7300800000000000000
+      internalID: 252157223354715456
       vertices: []
       indices: 
       edges: []

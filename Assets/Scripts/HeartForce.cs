@@ -6,6 +6,11 @@ public class HeartForce : MonoBehaviour
 {
     private int healPlayer = 25;
     [SerializeField] private GameObject explosion;
+
+    void Start()
+    {
+        StartCoroutine(Kill());
+    }
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         // Debug.Log(hitInfo.name);
@@ -22,6 +27,11 @@ public class HeartForce : MonoBehaviour
     public void Die()
     {
         Instantiate(explosion, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+    private IEnumerator Kill()
+    {
+        yield return new WaitForSeconds(5f);
         Destroy(gameObject);
     }
 }
