@@ -6,8 +6,12 @@ using TMPro;
 
 public class Health : MonoBehaviour
 {
-    // private int maxHealth = 100;
+    private bool dead = false;
+    private int maxHealth = 100;
     public int health = 100;
+    [SerializeField] private GameObject explosion;
+
+    private TextMeshProUGUI textMesh;
 
     public void TakeDamage(int damage)
     {
@@ -22,12 +26,20 @@ public class Health : MonoBehaviour
     }
     public void Heal(int heart)
     {
-        //if(health < maxHealth)
-        health += heart;
+        if(health < maxHealth)
+            health += heart;
     }
-    void Die()
+    public void Die()
     {
-        // Destroy(gameObject);
+        if(!dead)
+            StartCoroutine(Death());
+    }
+    private IEnumerator Death()
+    {
+        Instantiate(explosion, transform.position, transform.rotation);
+        // Debug.Log("die");
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(0);
     }
         

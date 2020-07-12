@@ -8,6 +8,5 @@ public class HPUpdater : MonoBehaviour
     TextMesh hp;
     void Start()
     {
-        hp = this.GetComponent<TextMeshProUGUI>().text = "yeehaw";
     }
 }

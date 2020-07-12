@@ -8,6 +8,7 @@ TagManager:
   - obstacle
   - ground
   - heal
+  - Karen
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3041356191992478222}
   - component: {fileID: 3041356191992478223}
   - component: {fileID: -3887442875156098775}
+  - component: {fileID: 1814858742065444022}
   m_Layer: 0
   m_Name: SpinnyBlade
   m_TagString: Untagged
@@ -94,3 +95,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f8d4a0350ce724d8e2d4030e5dffd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 4446936209586734161, guid: 357ff59c60e10ae49b0a65ea5670f594,
+    type: 3}
+--- !u!58 &1814858742065444022
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3041356191992478224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1

@@ -9,12 +9,12 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isJumping = false;
 
-    private float jumpForce = 15f;
+    private float jumpForce = 13f;
     private float speed = 5f;
-    private float fallMultiplier = 2.5f;
+    private float fallMultiplier = 3f;
     private float lowJump = 550f;
     // [SerializeField] private float decayRate = 0.1f;
-    float maxJumpTime = 0.3f;
+    float maxJumpTime = 0.15f;
     float jumpTimeCounter;
     float jumpCooldown;
 
