@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpikesController : MonoBehaviour
 {
+    [SerializeField] private GameObject explosion;
     void Start()
     {
         StartCoroutine(Killself());
@@ -16,5 +17,10 @@ public class SpikesController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    
+    public void Die()
+    {
+        Instantiate(explosion, transform.position, transform.rotation);
+        Destroy(gameObject);
+
+    }
 }

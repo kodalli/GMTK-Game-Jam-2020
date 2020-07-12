@@ -6,11 +6,13 @@ using UnityEngine;
 public class AudioController : MonoBehaviour
 {
     [SerializeField] private AudioSource audioData;
-    
+    [SerializeField] private AudioSource audioData2;
     void Start()
     {
-        audioData.GetComponent<AudioSource>();
+        audioData.GetComponents<AudioSource>();
+        audioData2.GetComponents<AudioSource>();
         audioData.Play(0);
+        audioData2.Play(0);
     }
 
 }

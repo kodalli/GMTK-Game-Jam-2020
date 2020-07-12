@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public bool isCar = false;
     [SerializeField] private float speed = -20f;
     private Rigidbody2D rb;
     // private float dist;
@@ -30,6 +31,11 @@ public class Bullet : MonoBehaviour
             {
                 collision.gameObject.GetComponent<FireController>().Die();
             }
+            else if (collision.gameObject.GetComponent<SpikesController>() != null && isCar)
+            {
+                collision.gameObject.GetComponent<SpikesController>().Die();
+            }
+
         }
         
     }
