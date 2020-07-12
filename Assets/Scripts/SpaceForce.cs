@@ -14,16 +14,22 @@ public class SpaceForce : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         // Debug.Log(hitInfo.name);
-        if(hitInfo.tag == "Player" || hitInfo.tag == "Karen" || hitInfo.tag == "obstacle")
+        if(hitInfo.tag == "Player") 
+        {
+            Health health = hitInfo.GetComponent<Health>();
+            if (health != null)
+            {
+                health.TakeDamage(damage);
+            }
+            Die();
+        }
+        else if (hitInfo.tag == "Karen" || hitInfo.tag == "obstacle")
         {
             Die();
         }
-            
-        Health health = hitInfo.GetComponent<Health>();
-        if (health != null)
-        {
-            health.TakeDamage(damage); 
-        }
+
+
+
     }
     public void Die()
     {

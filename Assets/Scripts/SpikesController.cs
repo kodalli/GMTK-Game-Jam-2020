@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireController : MonoBehaviour
+public class SpikesController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField] private GameObject explosion;
     void Start()
     {
         StartCoroutine(Killself());
@@ -18,10 +16,5 @@ public class FireController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void Die()
-    {
-        Instantiate(explosion, transform.position, transform.rotation);
-        Destroy(gameObject);
-
-    }
+    
 }

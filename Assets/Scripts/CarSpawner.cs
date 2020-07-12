@@ -35,7 +35,7 @@ public class CarSpawner : MonoBehaviour
     {
         GameObject obj = prefab[index];
         yield return new WaitForSeconds(Timer);
-        if(index == 4)
+        if(index == 4 || index == 3)
         {
             //Spinny blade
             Vector2 spawn = new Vector2(transform.position.x, 3f);

@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        Camera.main.GetComponent<screenShake>().StartShake(0.4f, 0.25f);
         gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         StartCoroutine(DamageIndicator());
         health -= damage;
@@ -35,6 +36,7 @@ public class Health : MonoBehaviour
     }
     private IEnumerator Death()
     {
+        Camera.main.GetComponent<screenShake>().StartShake(0.4f, 0.25f);
         Instantiate(explosion, transform.position, transform.rotation);
         // Debug.Log("die");
         gameObject.GetComponent<SpriteRenderer>().enabled = false;

@@ -24,6 +24,14 @@ public class Bullet : MonoBehaviour
         if(collision.gameObject.tag == "Player") {
             collision.gameObject.GetComponent<Health>().Die();
         }
+        if(collision.gameObject.tag == "obstacle")
+        {
+            if (collision.gameObject.GetComponent<FireController>() != null)
+            {
+                collision.gameObject.GetComponent<FireController>().Die();
+            }
+        }
+        
     }
     private IEnumerator Kill()
     {

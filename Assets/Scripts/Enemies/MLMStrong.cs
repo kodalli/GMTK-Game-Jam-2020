@@ -17,7 +17,7 @@ public class MLMStrong : MonoBehaviour
         {
             Die();
         }
-        if (collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<Rigidbody2D>().velocity.y < 0.1)
+        if (collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<Rigidbody2D>().velocity.y < 0)
         {
             Die();
             return;

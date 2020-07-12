@@ -19,7 +19,7 @@ public class AlexController : MonoBehaviour
     void FixedUpdate()
     {
         dist = Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
-        if (dist < 5f && timer < 0)
+        if (dist < 10f && timer < 0)
         {
             Attack();
             timer = fireRate;
@@ -36,7 +36,7 @@ public class AlexController : MonoBehaviour
         }
         else if (hitInfo.gameObject.tag == "Player")
         {
-            if (hitInfo.gameObject.GetComponent<Rigidbody2D>().velocity.y < 0.1)
+            if (hitInfo.gameObject.GetComponent<Rigidbody2D>().velocity.y < 0)
             {
                 Die();
                 return;

@@ -9,19 +9,14 @@ public class screenShake : MonoBehaviour
 {
     private float shakeTimeRemaining, shakePower, shakeFadeTime;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            StartShake(0.5f, 0.5f);
-        }
+        //// call for screen shake
+        //if (Input.GetKeyDown(KeyCode.K))
+        //{
+        //    StartShake(0.5f, 0.5f);
+        //}
     }
     private void LateUpdate()
     {
@@ -46,4 +41,6 @@ public class screenShake : MonoBehaviour
         shakeFadeTime = power / length;
 
     }
+
+
 }
