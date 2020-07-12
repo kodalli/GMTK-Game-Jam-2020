@@ -2,22 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpaceForce : MonoBehaviour
+public class HeartForce : MonoBehaviour
 {
-    private int damage = 25;
+    private int healPlayer = 25;
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         // Debug.Log(hitInfo.name);
-        if(hitInfo.tag == "Player")
-        {
+        if (hitInfo.tag == "Player") {
+            Health health = hitInfo.GetComponent<Health>();
+            if (health != null) {
+                health.Heal(healPlayer);
+            }
             Die();
-        }
-            
-        Health health = hitInfo.GetComponent<Health>();
-        if (health != null)
-        {
-            health.TakeDamage(damage); 
+
         }
     }
     public void Die()
@@ -26,3 +24,4 @@ public class SpaceForce : MonoBehaviour
 
     }
 }
+
