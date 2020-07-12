@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isJumping = false;
 
-    private float jumpForce = 13f;
+    private float jumpForce = 15f;
     private float speed = 5f;
     private float fallMultiplier = 3f;
     private float lowJump = 550f;
@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     float maxJumpTime = 0.15f;
     float jumpTimeCounter;
     float jumpCooldown;
+    float jumpValue;
 
     void Start()
     {
@@ -27,33 +28,31 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float jumpValue = Input.GetAxis("Jump");
-        if(!isJumping && jumpValue > 0.5f && jumpCooldown < 0f)
-        {
+        jumpValue = Input.GetAxis("Jump");
+    }
+
+    void FixedUpdate()
+    {
+        rb.velocity = new Vector2(speed, rb.velocity.y);
+        if (!isJumping && jumpValue > 0.5f && jumpCooldown < 0f) {
             animator.SetBool("Jumping", true);
             jumpCooldown = 0.7f;
             rb.AddForce(transform.up * lowJump);
             isJumping = true;
             jumpTimeCounter = maxJumpTime;
 
-        }
-        else if (isJumping && jumpValue > 0.5f) {
+        } else if (isJumping && jumpValue > 0.5f) {
             if (jumpTimeCounter > 0) {
                 rb.AddForce(transform.up * jumpForce);
                 jumpTimeCounter -= Time.deltaTime;
                 // Debug.Log(jumpTimeCounter);
-            } 
+            }
         }
         if (rb.velocity.y < 0) {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
             animator.SetBool("Jumping", false);
         }
         jumpCooldown -= Time.deltaTime;
-    }
-
-    void FixedUpdate()
-    {
-        rb.velocity = new Vector2(speed, rb.velocity.y);
     }
 
     void OnCollisionEnter2D(Collision2D other)
