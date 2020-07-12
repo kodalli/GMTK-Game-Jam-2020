@@ -20,6 +20,7 @@ public class CarSpawner : MonoBehaviour
         if (!hasSpawned)
         {
             int index = (int)Random.Range(0, prefab.Length);
+            // int index = 2;
             if(index == 0)
             {
                 //audioData.GetComponent<AudioSource>();

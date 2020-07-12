@@ -6,9 +6,12 @@ public class MLMweak : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private GameObject explosion;
+    [SerializeField] private AudioSource audioData;
     void Start()
     {
         StartCoroutine(Kill());
+        audioData.GetComponent<AudioSource>();
+        audioData.Play(0);
     }
     
     private void OnCollisionEnter2D(Collision2D collision)

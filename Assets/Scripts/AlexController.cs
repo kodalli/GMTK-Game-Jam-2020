@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AlexController : MonoBehaviour
 {
+    [SerializeField] private AudioSource audioData;
     [SerializeField] private int damage = 25;
     [SerializeField] private GameObject explosion;
     [SerializeField] private GameObject frog;
@@ -14,6 +15,8 @@ public class AlexController : MonoBehaviour
     void Start()
     {
         StartCoroutine(Kill());
+        audioData.GetComponent<AudioSource>();
+        audioData.Play(0);
     }
 
     void FixedUpdate()
