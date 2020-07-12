@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Health : MonoBehaviour
 {
-
+    // private int maxHealth = 100;
     public int health = 100;
-    // public GameObject deathEffect;
-    // Start is called before the first frame update
 
     public void TakeDamage(int damage)
     {
@@ -20,6 +19,11 @@ public class Health : MonoBehaviour
                 Die();
             }
   
+    }
+    public void Heal(int heart)
+    {
+        //if(health < maxHealth)
+        health += heart;
     }
     void Die()
     {
