@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    void LateUpdate()
+    void Update()
     {
         // deltaX = transform.position.x - objectTransform.position.x;
         //transform.position = Vector3.SmoothDamp(objectTransform.position.x + deltaX, transform.position.y, transform.position.z);
