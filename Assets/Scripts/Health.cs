@@ -41,7 +41,7 @@ public class Health : MonoBehaviour
         // Debug.Log("die");
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Level_0");
     }
     public int getHealth()
     {
