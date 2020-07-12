@@ -42,5 +42,9 @@ public class Health : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(0);
     }
+    public int getHealth()
+    {
+        return health;
+    }
         
 }

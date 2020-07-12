@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isJumping = false;
 
-    private float jumpForce = 13f;
+    private float jumpForce = 15f;
     private float speed = 5f;
     private float fallMultiplier = 3f;
     private float lowJump = 550f;
@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     float maxJumpTime = 0.15f;
     float jumpTimeCounter;
     float jumpCooldown;
+    float jumpValue;
 
     void Start()
     {
@@ -27,7 +28,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float jumpValue = Input.GetAxis("Jump");
+        jumpValue = Input.GetAxis("Jump");
+        
+    }
+
+    void FixedUpdate()
+    {
         if(!isJumping && jumpValue > 0.5f && jumpCooldown < 0f)
         {
             animator.SetBool("Jumping", true);
@@ -49,10 +55,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Jumping", false);
         }
         jumpCooldown -= Time.deltaTime;
-    }
-
-    void FixedUpdate()
-    {
         rb.velocity = new Vector2(speed, rb.velocity.y);
     }
 
