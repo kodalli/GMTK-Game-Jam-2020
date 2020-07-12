@@ -9,7 +9,7 @@ public class SpinnyBladeController : MonoBehaviour
     private void Start()
     {
         rb = gameObject.AddComponent<Rigidbody2D>();
-
+        StartCoroutine(Killself());
     }
     void FixedUpdate()
     {
@@ -27,6 +27,11 @@ public class SpinnyBladeController : MonoBehaviour
     private void Kill()
     {
         Instantiate(explosion, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+    private IEnumerator Killself()
+    {
+        yield return new WaitForSeconds(5f);
         Destroy(gameObject);
     }
 }

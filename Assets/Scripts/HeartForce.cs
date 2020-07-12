@@ -21,7 +21,7 @@ public class HeartForce : MonoBehaviour
             }
             Die();
 
-        } else if (hitInfo.tag == "Karen")
+        } else if (hitInfo.tag == "Karen" || hitInfo.tag == "obstacle")
             Die();
     }
     public void Die()

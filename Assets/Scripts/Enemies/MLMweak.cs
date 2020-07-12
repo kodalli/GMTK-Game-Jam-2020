@@ -2,38 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpaceForce : MonoBehaviour
+public class MLMweak : MonoBehaviour
 {
-    private int damage = 25;
+    // Start is called before the first frame update
     [SerializeField] private GameObject explosion;
-
     void Start()
     {
         StartCoroutine(Kill());
     }
-    void OnTriggerEnter2D(Collider2D hitInfo)
+    
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Debug.Log(hitInfo.name);
-        if(hitInfo.tag == "Player" || hitInfo.tag == "Karen" || hitInfo.tag == "obstacle")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Karen" || collision.gameObject.tag == "Enemy")
         {
             Die();
-        }
-            
-        Health health = hitInfo.GetComponent<Health>();
-        if (health != null)
-        {
-            health.TakeDamage(damage); 
         }
     }
     public void Die()
     {
         Instantiate(explosion, transform.position, transform.rotation);
         Destroy(gameObject);
-
     }
     private IEnumerator Kill()
     {
         yield return new WaitForSeconds(5f);
-        Destroy(gameObject);
+        Die();
+        
     }
 }
