@@ -5441,7 +5441,7 @@ GameObject:
   - component: {fileID: 1362401060}
   - component: {fileID: 1362401059}
   m_Layer: 0
-  m_Name: Text (TMP) (1)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5659,7 +5659,7 @@ GameObject:
   - component: {fileID: 1694680038}
   - component: {fileID: 1694680042}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
