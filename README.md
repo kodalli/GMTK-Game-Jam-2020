@@ -7,5 +7,5 @@ Made for GMTK 2020 Game Jam in 48 hrs
 
 Theme "out of control" 
 
-![til](https://media.giphy.com/media/rdNfZkIbvi50cgXqTk/giphy.gif)
-![til](https://giphy.com/gifs/rdNfZkIbvi50cgXqTk/html5)
+![Alt Text](https://media.giphy.com/media/rdNfZkIbvi50cgXqTk/giphy.gif)
+
